@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 
-const BottomRow = () => {
+function BottomRow() {
+  const [qtrValue, setqtrValue] = useState(0);
+  const initialqtrValue = 0
+
   return (
     <div className="bottomRow">
       <div className="down">
@@ -18,7 +21,8 @@ const BottomRow = () => {
       </div>
       <div className="quarter">
         <h3 className="quarter__title">Quarter</h3>
-        <div className="quarter__value">4</div>
+        <div className="quarter__value">{qtrValue}</div>
+        <button className="awayButtons__fieldGoal" onClick={()=>{if(qtrValue<4){setqtrValue(qtrValue+1)}}}>Update Quarter</button>
       </div>
     </div>
   );
