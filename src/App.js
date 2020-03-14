@@ -11,8 +11,8 @@ function App() {
   const [seconds, setSeconds] = useState(0);
   const [displayedTime, setDisplayedTime] = useState('00:00')
   const [score, setScore] = useState(
-    [{team: "lions", amount: 7},
-      {team: "tigers", amount: 7}
+    [{team: "lions", amount: 0},
+      {team: "tigers", amount: 0}
     ])
   //const [value, setValue] = useState(7);
 
